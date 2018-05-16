@@ -15,6 +15,11 @@ public class APSBrigdeModule extends ReactContextBaseJavaModule {
     this.reactContext = reactContext;
   }
 
+  @ReactMethod
+  public void show(String message, int duration) {
+    Toast.makeText(getReactApplicationContext(), message, duration).show();
+  }
+
   @Override
   public String getName() {
     return "APSBrigde";
